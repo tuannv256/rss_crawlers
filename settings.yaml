@@ -1,0 +1,104 @@
+environment: local
+version: v2
+apps:
+  api:
+    title: App Title
+    allow_origins:
+      - domain.com
+    secret: long_and_hard_b478af6bdc16aed94d610d8afd00272a
+auth:
+  admin: Admin
+media_cdn: str
+services:
+  scylladb:
+    music_monster:
+      contact_points:
+        - localhost
+      port: 9042
+      consistency_level: QUORUM
+      keyspace: keyspace
+  mongo:
+    uri: mongodb://usr:pwd@10.0.0.1:27017/
+    db_name: dev
+  kafka:
+    bootstrap_servers:
+      - localhost:9092
+  redis:
+    url: redis://localhost:6379/1
+  rabbitmq:
+    url: amqp://localhost:5672
+  elastic_search:
+    host: localhost
+    port: 9200
+    scheme: https
+  schema_registry:
+    url: http://localhost:8081
+  aws:
+    access_key_id: str
+    secret_access_key: str
+    region: str
+    kms_key_id: str
+    s3_default_bucket: str
+    sns:
+      platform_arn:
+        apns: str
+  youtube:
+    auth:
+      scope: str
+      token_type: str
+      access_token: str
+      refresh_token: str
+      expires_at: 1
+      expires_in: 1
+  slack:
+    token: str
+  firebase:
+    auth:
+      type: str
+      project_id: str
+      private_key_id: str
+      private_key: str
+      client_email: str
+      client_id: 1234
+      auth_uri: str
+      token_uri: str
+      auth_provider_x509_cert_url: str
+      client_x509_cert_url: str
+      universe_domain: str
+  payment:
+    square:
+      access_token: str
+      environment: str
+      location_id: str
+    gmo:
+      shop_id: str
+      shop_pass: str
+      url: str
+      ret_url: str
+      ret_url_paypal: str
+      start_paypal_url: str
+      result_url: str
+      apple:
+        allowed_urls:
+          - str
+        allowed_domains:
+          - str
+          - str
+  elevenlabs:
+    url: str
+    api_key: str
+  visa:
+    url: str
+  sentry:
+    active: false
+    dns_public: str
+    dns_ai: str
+    environment: test
+    traces_sample_rate: 0.1
+internal:
+  host:
+    personal_push_news: str
+    crawler_rss_sources: str
+
+kafka_connect:
+  ip_add: str

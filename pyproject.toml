@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "rss-crawlers"
+version = "0.1.0"
+description = "RSS crawlers"
+authors = ["Tuan Nguyen Vinh <tuannv.256@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Scrapy = "^2.11.2"
+crochet = "^2.1.1"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+dynaconf = "^3.2.5"
+sentry-sdk = "^2.5.1"
+scylla-driver = "^3.26.8"
+feedparser = "^6.0.11"
+pillow = "^10.3.0"
+boto3 = "^1.34.134"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
